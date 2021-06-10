@@ -47,6 +47,12 @@ aha.on("personalStartButton", ({ record, fields, onUnmounted }, { identifier, se
     record.save();
   };
 
+  const handleProductReview = () => {
+    record.workflowStatus = { name: settings.productReviewWorkflowStatus };
+    record.teamWorkflowStatus = { name: settings.productReviewTeamWorkflowStatus };
+    record.save();
+  };
+
   return (
     <>
       <Styles />
@@ -55,6 +61,9 @@ aha.on("personalStartButton", ({ record, fields, onUnmounted }, { identifier, se
       </span>
       <span className='text-class'>
         <aha-button size="mini" type="primary" outline onClick={handleCodeReview}>Code review</aha-button>
+      </span>
+      <span className='text-class'>
+        <aha-button size="mini" type="primary" outline onClick={handleProductReview}>PM review</aha-button>
       </span>
       <span className='text-class'>
         <aha-button size="mini" type="primary" outline onClick={handleFinish}>Finish</aha-button>

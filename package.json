@@ -87,22 +87,40 @@
           "default": "Done"
         },
         "reviewWorkflowStatus": {
-          "title": "Workflow status in review",
+          "title": "Workflow status in code review",
           "type": "string",
           "scope": [
             "user", "account"
           ],
-          "description": "Name of the workflow status to set on for review",
+          "description": "Name of the workflow status to set on for code review",
           "default": "In code review"
         },
         "reviewTeamWorkflowStatus": {
-          "title": "Team workflow status in review",
+          "title": "Team workflow status in code review",
           "type": "string",
           "scope": [
             "user", "account"
           ],
-          "description": "Name of the team workflow status to set for review",
+          "description": "Name of the team workflow status to set for code review",
           "default": "In code review"
+        },
+        "productReviewWorkflowStatus": {
+          "title": "Workflow status in PM review",
+          "type": "string",
+          "scope": [
+            "user", "account"
+          ],
+          "description": "Name of the workflow status to set on for PM review",
+          "default": "PM review"
+        },
+        "productReviewTeamWorkflowStatus": {
+          "title": "Team workflow status in PM review",
+          "type": "string",
+          "scope": [
+            "user", "account"
+          ],
+          "description": "Name of the team workflow status to set for PM review",
+          "default": "Done"
         }
       }
     }
